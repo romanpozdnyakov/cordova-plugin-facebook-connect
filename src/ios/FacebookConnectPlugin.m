@@ -1015,7 +1015,7 @@ void FBMethodSwizzle(Class c, SEL originalSelector) {
 
     // Call existing method
     [self swizzled_application:application openURL:url options:options];
-    return YES
+    return NO
 }
 
 - (BOOL)noop_application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
