@@ -1014,7 +1014,8 @@ void FBMethodSwizzle(Class c, SEL originalSelector) {
     NSLog(@"FB handle url using application:openURL:options: %@", url);
 
     // Call existing method
-    return [self swizzled_application:application openURL:url options:options];
+    [self swizzled_application:application openURL:url options:options];
+    return YES
 }
 
 - (BOOL)noop_application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
